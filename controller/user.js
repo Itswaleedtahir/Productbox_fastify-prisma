@@ -5,7 +5,7 @@ const app = fastify();
 const moment = require("moment");
 
 module.exports ={
-users :  async (request, reply) => {
+create :  async (request, reply) => {
     const { name, phone_number } = request.body;
     const ifUser = await prisma.user.findUnique({
         where: { phone_number: phone_number },
@@ -24,7 +24,7 @@ users :  async (request, reply) => {
     });
     reply.send(user);
   },
-Opt: async (request, reply) => {
+generateOtp: async (request, reply) => {
     try {
       const { phone_number } = request.body;
       if (!phone_number) {

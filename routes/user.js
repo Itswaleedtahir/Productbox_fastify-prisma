@@ -1,19 +1,19 @@
-const blogController = require('../controller/user');
+const userController = require('../controller/user');
 
 const routes = [{
         method: 'POST',
         url: '/api/users/generateOTP',
-        handler: blogController.Opt
+        handler: userController.generateOtp
     },
     {
         method: 'POST',
         url: '/api/users',
-        handler: blogController.users
+        handler: userController.create
     },
 {
         method: 'GET',
         url: '/api/users/:userId/verifyOTP',
-        handler: blogController.verify
+        handler: userController.verify
     },
 ]
 module.exports = routes

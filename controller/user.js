@@ -48,7 +48,7 @@ Opt: async (request, reply) => {
       });
       reply.status(200).send({
         otp: user.otp,
-        user: user.id,
+        id: user.id,
       });
     } catch (err) {
       reply.status(err.status || 500).send(err.message || err);

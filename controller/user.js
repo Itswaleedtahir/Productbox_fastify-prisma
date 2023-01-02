@@ -1,7 +1,7 @@
 const {PrismaClient} = require('@prisma/client')
 const prisma = new PrismaClient()
 const fastify = require('fastify');
-const app = fastify();
+const app = fastify()
 const moment = require("moment");
 
 module.exports ={
